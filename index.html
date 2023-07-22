@@ -4,20 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stopwatch Project</title>
+  <!-- Link to bootstrap css framework for styling -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Link to css file for additional styles specific to this project -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Main container with top margin -->
   <div class="container mt-3">
+    <!-- Center the content horizontally within the row -->
     <div class="row justify-content-center">
+        <!-- Container for the stopwatch elements -->
         <div class="stopwatch">
+          <!-- Display area to show the time elapsed -->
           <div id="display" class="mb-4">00:00:00</div>
+          <!-- Button to start the stopwatch -->
           <button id="startBtn" class="btn btn-success mr-2">Start</button>
+          <!-- Button to stop the stopwatch (initially disabled) -->
           <button id="stopBtn" class="btn btn-danger mr-2" disabled>Stop</button>
+          <!-- Button to reset the stopwatch (initially disabled) -->
           <button id="resetBtn" class="btn btn-warning" disabled>Reset</button>
         </div>
     </div>
   </div>
+  <!-- Load the javascript file containing the stopwatch functionality -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,24 +1,29 @@
+/* Set the flex container to display its children in a row, and align them vertically centered */
 body {
     display: flex;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom right,  #e4f048,#cc3e74);
-  }
-  
+    /* Apply a linear gradient as the background, flowing from top-left to bottom-right */
+    background: linear-gradient(to bottom right, #e4f048, #cc3e74);
+}
+
+/* Style the container for the stopwatch elements */
 .stopwatch {
     text-align: center;
     background-color: inherit;
     border-radius: 20px;
     padding: 20px;
+    /* Add a border with a slight transparency effect */
     border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);
-  }
-  
+    /* Add a box shadow for a elevation effect */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Style the display area for the stopwatch */
 #display {
     font-size: 25px;
     font-weight: bold;
     padding: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(59, 52, 52, 0.76);
     border-radius: 10px;
-  }
-  
+}

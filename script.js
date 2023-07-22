@@ -1,32 +1,32 @@
-//declaring constants to get the reference to the HTML elements by their id
+//Declaring constants to get the reference to the HTML elements by their id
 const display = document.getElementById('display');
 const startBtn = document.getElementById('startBtn');
 const stopBtn = document.getElementById('stopBtn');
 const resetBtn = document.getElementById('resetBtn');
 
-//declaring the variables which are needed to perform the required functions
+//Declaring the variables which are needed to perform the required functions
 let startTime, pauseTime, intervalId, running = false;
 
-//function used to format the milliseconds to 'hh:mm:ss' format
+//Function used to format the milliseconds to 'hh:mm:ss' format
 function formatTime(ms) {
   const p = (n) => n.toString().padStart(2, '0');
   return `${p(ms / 3600000 | 0)}:${p(ms / 60000 % 60 | 0)}:${p(ms / 1000 % 60 | 0)}`;
 }
 
-//function used to calculate the current time and display it
+//Function used to calculate the current time and display it
 function updateDisplay() {
   const currentTime = running ? Date.now() - startTime : pauseTime;
   display.textContent = formatTime(currentTime);
 }
 
-// function used to disable/enable the buttons when an event is clicked
+//Function used to disable/enable the buttons when an event is clicked
 function toggleButtons(start, stop, reset) {
   startBtn.disabled = start;
   stopBtn.disabled = stop;
   resetBtn.disabled = reset;
 }
 
-//method used to start the timer on click event
+//Method used to start the timer on click event
 startBtn.addEventListener('click', () => {
   if (!running) {
     startTime = Date.now() - (pauseTime || 0);
@@ -36,7 +36,7 @@ startBtn.addEventListener('click', () => {
   }
 });
 
-//method used to stop the timer on click event
+//Method used to stop the timer on click event
 stopBtn.addEventListener('click', () => {
   if (running) {
     clearInterval(intervalId);
@@ -47,7 +47,7 @@ stopBtn.addEventListener('click', () => {
   }
 });
 
-//method used to reset the timer on click event
+//Method used to reset the timer on click event
 resetBtn.addEventListener('click', () => {
   clearInterval(intervalId);
   intervalId = null;
@@ -58,5 +58,5 @@ resetBtn.addEventListener('click', () => {
   toggleButtons(false, true, true);
 });
 
-//initializing the toggle buttons
+//Initializing the toggle buttons
 toggleButtons(false, true, true);
