@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right,  #e4f048,#cc3e74);
+  }
+  
+.stopwatch {
+    text-align: center;
+    background-color: inherit;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.5);
+  }
+  
+#display {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+  }
+  
